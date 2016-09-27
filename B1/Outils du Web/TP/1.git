@@ -1,0 +1,47 @@
+Ce TP est a réaliser à deux,mais vous devez chacun faire l'intégralité du TP.
+
+PARTIE 1 ( solo ) 
+1) Téléchargez et installez GIT.
+2) Si vous etes sous windows ( shame on you ) lancez gitbash ou gitshell 
+	//Placez votre shell dans un repertoire de votre choix.
+	//Pour info -> cd DossierDestination pour se déplacer sous Linux/GitShell
+	//	    -> pwd pour connaitre l'emplacement actuel 
+	//	    -> cd .. pour revenir en arrière 
+3) Créez un compte sur github
+4) Cliquez sur newrepository
+5) Donnez lui un nom 
+6) Laissez le en public 
+7) Cliquez sur "Create Repository"
+
+Très bien à cet instant vous avez installé Git et vous possedez un compte sur github.
+Il est maintenant temps d'ajouter des fichiers dans ce repository
+
+8) Suivez les instructions de la section "...or create a new repository on the command line"
+	echo "# TestCours" >> README.md #On crée un fichier Readme.md en écrivant à l'interrieur
+	git init			#On initialise le dossier comme repertoire git
+	git add README.md		#On déclare le fichier Readme.md comme nouveau fichier sur le serveur
+	git commit -m "first commit"	#On "Commit" cad on sauvegarde nos modifications 
+	git remote add origin <URLDONNEPARLESERVEUR>	#Cette opération n'est a faire qu'une seule fois elle permet d'indiquer a git ou se trouve le serveur
+	git push -u origin master	#On "Push" les modifications sur le serveur. l'option -u n'est a préciser que la première fois
+
+#A ce moment précis git va vous demander de vous authentifier.
+	And voila votre code est disponible sur github
+
+PARTIE 2 ( avec votre voisin ) 
+
+1)Rendez vous sur votre repo github
+2)Cliquez sur Settings
+3)Cliquez sur Collaborators
+4)Ajoutez l'adresse mail de votre voisin.
+
+#Votre voisin est maintenant collaborateur sur votre repo.
+#C'est a dire qu'il peut Télécharger votre code, le modifier et pousser les modifications sur le serveur (Utile quand on a un projet de groupe ;) ) 
+
+1)Rendez vous sur le repo github de votre voisin
+2)Clonez le repository dans un nouveau dossier 
+3)Modifiez le fichier de votre voisin.
+4)Commitez votre changement n'oubliez pas de laisser un message ( -m "message")
+
+5)Recupérez le code envoyé par votre voisin 
+
+#Fin du TP :) 

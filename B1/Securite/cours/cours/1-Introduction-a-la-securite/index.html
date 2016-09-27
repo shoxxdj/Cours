@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sécurité B1 - 1 - Introduction</title>
+
+		<meta name="description" content="Sécurité B1 - 1 - Introduction">
+		<meta name="author" content="Rémi Martin de abia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		    <div class="slides">
+		        <section><h1>Introduction à la sécurité informatique</h1>
+		        <hr/>
+		        <h3>Rémi Martin de Abia</h3>
+		        </section>
+		        <section class="fragment fade-in">
+		        	<h2>Introduction à l'introduction</h2>
+		        </section>
+		        <section class="fragment">
+		        	<p>Etudiant 4eme année</p>
+		        	<p>Dirlab Sécu</p>
+		        	<p>Master Troll 2014/2015</p>
+		        	<p>CTF player</p>
+		        	<p>Blogger</p>
+		        	<p>Security & Linux fan</p>
+		        </section>
+		        <section>
+		        	<h3>Organisation des cours</h3>
+		        </section>
+		        <section>
+		        	<h4>Découpage</h4>
+		        	<ul>
+		        		<li>48 séances ( 2h )</li>
+		        		<li>25% cours, 25% TP, 50% fil rouge</li>
+		        	</ul>
+		        </section>
+		        <section>
+		        	<p>Vous êtes libre de faire ce que vous voulez pendant la journée</p>
+		        	<p>A vous d'assumer par la suite :) </p>
+		        	<p>La journée commence par le cours, suivie du TP</p>
+		        	<p>Le Tp est à rendre et sera corrigé à la prochaine séance</p>
+		        	<p>Si aucune question n'est posée à la fin du TP je considère que les notions sont acquises</p>
+		        </section>
+
+		        <!-- debut du cours -->
+		        <section>
+		        	<h1>Securité</h1>
+		        	<hr/>
+		        	<h2>Pourquoi ?</h2>
+		        </section>
+
+		        <section data-background="images/ashleymadisson.jpg">
+					<h1 class="fragment" style='color:red'>37M  De données utilisateurs dans la nature</h1>
+				</section>
+
+				<section data-background="images/evernote.jpg">
+					<h1 class="fragment" style='color:red'>50M Users Data</h1>
+				</section>
+
+				<section data-background="images/target.jpg">
+					<span  class="fragment">
+						<h1 >110M Client Data</h1>
+						<h2>( include <u style='color:red'>Credit Card Number</u> )</h2>
+					</span>
+				</section>
+
+				<section>
+					<h4>En résumé :</h4>
+					<p>La sécurité est devenue un enjeu majeur à ne surtout pas négliger.
+					Les potentielles failles de sécurité sont présentes partout, du développement, à la mise en production, et même lors de la maintenance</p>
+					<img src="images/faillespartout.jpg"/>
+				</section>
+				
+				<!-- Le Hacking -->
+				<section>
+					<h1>Le Hacking</h1>
+					<h3>Souvent le Hacking et la Sécurité informatique sont liés</h3>
+					<h3>Cependant le Hacking concerne plus à l'origine le coté "bidouille"</h3>
+				</section>
+
+				<section>
+					<h1>Ce que le Hacking n'est pas :</h1>
+					<table>
+						<tr>
+							<td><img src="images/nothacking1.jpg"/></td>
+							<td><img src="images/nothacking2.jpg"/></td>
+							<td><img src="images/nothacking3.jpg"/></td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h1>Qui sont les Hackers ?</h1>
+				</section>
+
+				<section>
+					<h1>Black Hat</h1>
+					<h2>"Bad Guy"</h2>
+					<h3>Hack for benefits, money, money & money</h3>
+				</section>
+
+				<section>
+					<h1>White Hat</h1>
+					<h2>"Good Guy"</h2>
+					<h3>Report every Hacks <i style='color:red'>Aucun risque</i></h3>
+				</section>
+
+				<section>
+					<h1>Grey Hat</h1>
+					<h2><i>"Hacker qui a le cul entre 2 chaises"</i></h2>
+					<h3>Hacker qui a des principes mais aussi besoin d'argent</h3>
+				</section>
+
+				<section>
+					<h1>Script Kiddies</h1>
+					<h4>( Lammer )</h4>
+					<h5>Le débutant qui ne cherche qu'à utiliser des scripts tout faits</h5>
+					<img src="images/lamer.jpg"/>
+				</section>
+
+				<section>
+					<h1>Hacktivist</h1>
+					<h2>Agissent pour une cause</h2>
+					<table>
+						<tr>
+							<td><img src="images/aaron.jpg"></td>
+							<td><img src="images/snowden.jpg"></td>
+							<td><img src="images/assange.jpg"></td>
+						</tr>
+					</table>
+				</section>
+
+				<section>
+					<h1>Ou trouver des hackers ?</h1>
+					<img src="images/wherearehackers.jpg"/>
+				</section>
+				<section>
+					<h1>Ou trouver des hackers ?</h1>
+					<h2>Conférences, CTF, Forums, IRC ..</h2>
+				</section>
+
+				<section>
+					<h2>Comment progresser :</h2>
+					<img src="images/practice.jpg">
+				</section>
+
+				<section>
+					<p>L'introduction est terminée :D </p>
+				</section>
+
+				<!-- /Le Hacking -->
+
+				<section>
+					<h1>Sécurité Informatique</h1>
+					<hr/>
+					<h2>Vocabulaire</h2>
+				</section>
+
+		        <section>
+		        	<h4>Les 3 grands piliers de la sécurité : ( ou critères ) </h4>
+		        	<h1><span class="fragment">C</span><span class="fragment">I</span><span class="fragment">A</span></h1>
+		        	<h2 class="fragment">Confidentiality</h2>
+		        	<h2 class="fragment">Integrity</h2>
+		        	<h2 class="fragment">Availability</h2>
+		        </section>
+
+		        <section>
+		        	<h1>Confidentialité</h1>
+		        	<span class="fragment">
+		        	<p>La donnée n'est lisible que pour l'utilisateur qui en a les droits</p>
+		        	<img src="images/confidentiality.jpg"/>
+		        	</span>
+		        </section>
+
+		        <section>
+		        	<h1>Comment garantir la <u>confidentialité</u> ?</h1>
+		        	<h2 class="fragment">Chiffrement, Contrôle des accès...</h2>
+		        </section>
+
+		        <section>
+		        	<h1>Intégrité</h1>
+		        	<p class="fragment">La donnée n'a pas été modifiée</p>
+		        </section>
+
+		        <section>
+		        	<h1>Comment garantir l'<u>intégrité</u> ?</h1>
+		        	<h2 class="fragment">Checksum, Hash</h2>
+		        </section>
+
+		        <section>
+		        	<h1>Disponibilité</h1>
+		        	<p>La donnée / le service est accessible</p>
+		        </section>
+
+		        <section>
+		        	<h1>Comment garantir la <u>disponibilité</u> ?</h1>
+		        	<h2 class="fragment">Redondance, Culstering, Duplication, Sauvegardes ..</h2>
+		        </section>
+
+		       	<section>
+		       		<h1>Notions supplémentaires</h1>
+		       		<ul>
+		       			<li><u>Non Répudiation</u> : Ne pas pouvoir nier avoir fait une action</li>
+		       			<li><u>Authentification</u> : Pouvoir assurer l'identité d'un utilisateur</li>
+		       		</ul>
+		       	</section>
+
+		       	<!-- Les risques -->
+
+		       	<section>
+		       		<h1>Les risques</h1>
+		       	</section>
+
+				<section>
+				<h4>Risque = ( Menace * Vulnérabilité ) / Contre-mesures</h4>
+					<table>
+						<tr>
+							<td>Menace -> type d'action susceptible de nuire</td>
+						</tr>
+						<tr>
+							<td>Vulnérabilité -> faiblesse dans le systeme</td>
+						</tr>
+						<tr>
+							<td>Contre-mesures -> actions mises en place pour contrer les Menaces/Vulnérabilités</td>
+						</tr>
+						<tr>
+							<td>Une contre-mesure peut etre aussi bien une solution technique que de la formation / sensibilisation</td>
+						</tr>
+					</table>
+				</section>
+				
+				<section>
+					<h1>Qui représente un risque ?</h1>
+				</section>
+
+				<section>
+					<h1>Black Hat</h1>
+					<h1>La concurence</h1>
+				</section>
+
+				<section>
+					<h1>Les employés mécontents</h1>
+					<h2>Ils disposent des accès et peuvent causer de lourds dommages</h2>
+					<h3><i>Ex: Snowden</i></h3>
+				</section>
+
+				<section>
+					<h3>L'étude des risques</h3>
+					<p>Pour chacun des actifs ( équipement, personne ) on va qualifier la situation pour juger de son potentiel à représenter un risque</p>
+					<p></p>
+				</section>
+
+				<section>
+					<h3>Exemple: OVH</h3>
+					<aside class="notes">
+						Risques informatiques : attaques, pannes, intrusions .. 
+						Risques liés aux employés : vol de données .. 
+						Risques naturels : Electrique, emplacement des datacenters
+					</aside>
+				</section>
+
+				<section>
+					<h1>Attaquer une cible</h1>
+					<aside class="notes">
+						Le but ici n'est pas d'apprendre comment devenir un Black Hat, mais de connaitre les techniques utilisés par ces derniers. 
+					</aside>
+				</section>
+
+				<section>
+					<h2>Généralement une attaque se découpe en X phases</h2>
+					<ul>
+						<li>Reconnaissance <i>Prise d'informations</i></li>
+						<li>Scanning <i>Découverte du réseau</i></li>
+						<li>Gain d'accès <i>Attaque !</i></li>
+						<li>Maintient d'accès <i>Backdoor</i></li>
+						<li>Nettoyage <i>Vidage des logs</i></li>
+					</ul>
+				</section>
+		        <!-- fin du cours -->
+
+		    </div>
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+
