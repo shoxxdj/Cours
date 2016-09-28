@@ -1,0 +1,28 @@
+Vous etes une équipe de 5 développeurs
+Vous avez l'idée du futur et avez envie de la développer ensemble. 
+Evidemment pour travailler vous allez devoir collaborer et pouvoir échanger. 
+Je vous laisse en autonomie, et viendrais vous voir réguilèrement pour que vous me faisiez part de vos avancés et justifiez vos choix.
+
+Vous allez donc devoir choisir un serveur git pour heberger votre code parmis :
+	- Github
+	- Bitbucket 
+	- GitLab
+
+Vous allez aussi devoir mettre en place un outil permettant de définir et meusurer l'avancement dans vos taches 
+	-Trello
+	-Drive
+
+
+Evidemment tous les membres du projet doivent pouvoir acceder au code et à l'outil d'avancement.
+
+Ce TP à pour but de vous mettre en situation
+Vous devez préaprer le terrain pour pouvoir travailler le plus éfficacement
+Appelez moi pour valider ces choix et leur mise en place.
+
+Une fois ces outils en place vous allez entammer le "développement".
+Chacun d'entre vous doit créer une branche qu'il appelera du nom de la fonction qu'il va mettre en place
+Puis chaque participant ajoute un fichier sur sa branche (nommez ce fichier avec votre nom)
+Chaque participant effectue un pull request auprès du propriétaire du repository
+Validez les pull requests et fusionnez les branches 
+A la fin du TP vous devriez avoir une seule branche ( master ) contenant tout les fichiers.
+Vous pouvez maintenant chercher comment faire une "github project page" pour présenter votre projet ( Google is your friend) 
