@@ -228,23 +228,136 @@ Sinon
 					<p>Lire 2 nombres, afficher le plus grand</p>
 				</section>
 				<section>
-					<h3>Meme chose, mais en 5 instructions</h3>	
+					<h1>Optimisation</h1>
 				</section>
-				
+				<section>
+					<h3>Meme chose, mais en 5 instructions maximum</h3>	
+				</section>
+				<section>
+					<h1>Les boucles</h1>
+				</section>
+				<section>
+					<h1>Pourquoi répéter bêtement 100x la meme chose</h1>
+				</section>
+				<section>
+					<h3>Chaque boucle utilise un compteur</h3>
+					<h3>Ce compteur est en réalité une variable</h3>
+				</section>
+				<section>
+					<h2>Tant que</h2>
+					<p>Cette boucle s'execute tant que la condition n'est pas remplie</p>
+				</section>
+				<section>
+				<pre>
+ENTIER i = 0;
+TANT QUE(i<10){
+	Afficher(i);
+	i+=1;
+}
 
+				</pre>
+				</section>
+				<section>
+					<p>Exo 3:</p>
+					<p>lire un nombre</p>
+					<p>Additionner tout les nombres de 0 à ce nombre</p>
+					<p>Ex : nombre choisit = 5</p>
+					<p>resultat = 0+1+2+3+4+5</p>
+				</section>
+				<section>
+					<pre>
+Entier Total=0;
+Entier Compteur = Lire();
+Entier Valeur;
+Tant que(Compteur>0){
+	Valeur = Lire();
+	Total=Total+Valeur;
+	Compteur--;
+}
+Afficher(Total);
 
-<!--		    		<section>
-		    			<h1>Tapons www.google.fr</h1>
-		    			<h1>Appuyons sur Entrée</h1>
-		    			<h1>Que se passe-t-il ?</h1>
-		    		</section>
-		    		<section>
-		    			<h1>Signal electrique</h1>
-		    		</section>
-		    		<section>
-		    			
-		    		</section>-->
+					</pre>
+				</section>
+				<section>
+					<p>Exo 4:</p>
+					<p>Tables de multiplication</p>
+					<p>Ecrire un algo permettant d'afficher les tables de multiplication (de 0 à 10)</p>
+				</section>
+				<section>
+					<p>Exo 4:</p>
+					<p>Tables de multiplication</p>
+					<p>Ecrire un algo permettant d'afficher les tables de multiplication (de 0 à 10)</p>
+					<p><i><u>Hint</u></i>: Pensez au boucles dans les boucles</p>
+				</section>
 
+				<section>
+					<pre>
+ENTIER a=0;
+ENTIER b=0;
+Tant que(a<=10){
+	Tant que(b<=10){
+		Valeur = a*b;
+		Afficher(a+"+"+b+"="+Valeur);
+		b++;
+	}
+	b=0;
+	a++;
+}						
+					</pre>
+				</section>
+				<section>
+					<p>Exo 5</p>
+					<p>Nombres pairs</p>
+					<p>Affichez tout les nombres pairs de 0 à 100</p>
+				</section>
+				<section>
+					<pre>
+ENTIER Valeur = -2;
+Tant que(Valeur<100){
+	Valeur=Valeur+2;
+	Afficher(Valeur);
+}
+					</pre>
+				</section>
+				<section>
+					<h1>Le modulo</h1>
+				</section>
+				<section>
+					<h1>Le modulo</h1>
+					<p>"Division reste" -> division Euclidienne</p>
+					<p>Le résultat de la fonction modulo correspond au reste de la division euclidienne</p>
+				</section>
+				<section>
+					<p>Exemple :</p>
+					<p>Modulo(5,2)</p>
+					<p>5/2 =2+1</p>
+					<p>Modulo(5,2)=1</p>
+					<p>Modulo(6,3)=0</p>
+				</section>
+				<section>
+					<p>Exo 6</p>
+					<p>Afficher les nombres pairs situés entre 2 nombres choisits par l'utilisateur</p>
+				</section>
+				<section>
+					<pre>
+ENTIER Binf=Lire();
+ENTIER Bsup=Lire();
+
+Si(Binf>Bsup){
+	ENTIER tmp=Bsup;
+	Binf=Bsup;
+	Bsup=tmp;
+}
+
+Si(Mod(Binf,2)==1){
+	Binf+=1;
+}
+Tant que(Binf<=Bsup){
+	Afficher(Binf):
+	Binf+=2;
+}
+					</pre>
+				</section>
 
 		        <!-- fin du cours -->
 
