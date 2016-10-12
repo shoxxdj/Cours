@@ -41,6 +41,97 @@
 		    <div class="slides">
 		    	<!-- debut du cours -->
 		    	<section>
+		    		<h1>Day 3</h1>
+		    	</section>
+		    	<section>
+		    		<h3>Echauffement</h3>
+		    		<p>Le jeu du plus ou moins</p>
+		    	</section>
+		    	<section>
+		    		<p>L'ordinateur tire un nombre</p>
+		    		<p>L'utilisateur dois trouver ce nombre</p>
+		    		<p>Il effectue une proposition</p>
+		    		<p>L'ordinateur répond par + ou -</p>
+		    		<p>Le jeu continue tant que l'utilisateur n'a pas trouvé la bonne valeur</p>
+		    	</section>
+
+		    	<section>
+		    		<h3>Echauffement 2</h3>
+		    		<p>Le solveur de + ou -</p>
+		    	</section>
+		    	<section>
+		    		<p>Ce jeux peut etre résolu en 7 coups maximums</p>
+		    		<p>Trouvez l'algorithme permettant de faire ceci</p>
+		    	</section>
+
+
+		    	<section>
+		    		<h1>Les fonctions</h1>
+		    		<h2>LIRE(),AFFICHER() .. </h2>
+		    		<p>Pourquoi réinventer en permanance la roue ? :)</p>
+		    	</section>
+
+		    	<section>
+		    		<p>Les fonctions sont des portions de codes précises</p>
+		    		<p>Elle ne s'execute que quand elle est appelée</p>
+		    		<p>Chaque fonction à une utilité</p>
+		    		<p>Elle peut ou non prendre une ou plusieures entrées</p>
+		    		<p>Elle peut ou non renvoyer un résulat</p>
+		    	</section>
+		    	<section>
+		    		<pre>
+FONCTION Addition(nombre1,nombre2){
+	Reel total = nombre1+nombre2
+	Retourne total
+}
+		    		</pre>
+		    		<p>nombre1 et nombre2 sont les paramètres de la fonction Addition</p>
+		    		<p>une fois terminé la fonction retourne Total</p>
+		    	</section>
+
+		    	<section>
+		    	<pre>
+ENTIER maVariable = LIRE()
+				</pre>
+				<p>Le résultat de la fonction LIRE est envoyé dans la variable maVariable</p>
+		    	</section>
+
+		    	<section>
+		    		<h2>La portée des variables</h2>
+		    	</section>
+		    	<section>
+		    	<p>Les variables ne sont effectives <u>que dans le scope de leur fonction</u></p>
+		    	<pre>
+Fonction Calcul(a,b){
+	a = a+b
+	retourne a
+}
+
+a = 7
+nb1=5
+nb2=10
+AFFICHER(Calcul(nb1,nb2)) #Afficher 15
+AFFICHER(a) #Affiche 7
+		    	</pre>
+		    	</section>
+		    	<section>
+		    		<p>Exercice 16: La Calculatrice</p>
+		    		<p>Créer 4 fonctions ( Addition / Soustraction / Multip / Div)</p>
+		    		<p>L'utilisateur entre deux nombres puis l'opération de son choix</p>
+		    		<p>Il doit pouvoir utiliser la calculatrice autant qu'il le souhaite</p>
+		    	</section>
+
+		    	<section>
+		    		<p>Exo Bonus</p>
+		    		<p>Créer une fonction qui calcule le produit de deux nombres avec uniquement des additions</p>
+		    	</section>
+
+		    	<section>
+		    		<p>Exo Bonus 2: Multiplié par 8</p>
+		    		<p>Prendre un nombre, le multiplier par 8 avec uniquement 3 additions</p>
+		    	</section>
+
+		    	<section>
 		    		<h1>Les Bases</h1>
 		    	</section>
 		    	<section>
@@ -120,6 +211,71 @@
 		    		<p>On écrit ensuite toutes les puissances de 2 de celle ci jusqu'a 1</p>
 		    		<p>Si le nombre désiré peux se soustraire au nombre en question on met 1 dans la case, si non 0</p>
 		    	</section>
+		    	<section>
+		    		<p>Moment magique ou je dessine au tableau</p>
+		    	</section>
+
+		    	<section>
+		    		<p>Exercice 17</p>
+		    		<p>Ecrire un algorithme permettant de convertir des nombres en base 10 vers la base 2</p>
+		    		<p>/!\ Les nombres doivent sortir par "groupe d'octets"</p>
+		    		<p>Ex : 257 =>00000001 00000001</p>
+		    		<p>Fonctions disponibles : Taille(chaine) <- Retourne la taille d'une chaine</p>
+		    	</section>
+
+		    	<section>
+		    		<h1>Base 16 (Hexadécimal)</h1>
+		    		<h3>Parce que retenir 10100010 c'est pas facile :)</h3>
+		    	</section>
+		    	<section>
+		    		<p>La base 2 est la plus proche du langage machine</p>
+		    		<p>La base 16 permet de se rapprocher du langage Humain</p>
+		    	</section>
+		    	<section>
+		    		<p >Base 10 : 0 1 2 3 4 5 6 7 8 9 10 </p>
+		    		<p class="fragment">Base 2 : 0 1</p>
+		    		<p class="fragment">base 16 : 0 1 2 3 4 5 6 7 8 9 <span class="class="fragment">A B C D E F</span></p>
+		    	</section>
+		    	<section>
+		    		<h3>Transformer un nombre en base 10 vers la base 16</h3>
+		    	</section>
+		    	<section>
+		    		<p>Méthode des divisions</p>
+		    		<p>Pareil que pour la base 2, mais par 16</p>
+		    	</section>
+		    	<section>
+		    		<p>Exercice 18</p>
+		    		<p>Convertir 17 en base 16</p>
+		    		<p>Convertir 255 en base 16</p>
+		    		<p>Convertir 1058 en base 16</p>
+		    	</section>
+		    	<section>
+		    		<p>En passant par le binaire</p>
+		    		<p>On divise un octet en 2</p>
+		    		<p>On convertit chaque partie en base 16</p>
+		    		<p>(Dessin 2)</p>
+		    	</section>
+
+		    	<section>
+		    		<p>Exercice 19</p>
+		    		<p>Convertir 7854 en base 2 puis 16</p>
+		    		<p>Convertir 238 en base 2 puis 16</p>
+		    		<p>Convertir 1337 en base 16 puis 2</p>
+		    	</section>
+
+		    	<section>
+		    		<p>Exercice 20: Convertisseur RGB</p>
+		    		<p>La création d'une couleur se fait via 3 composantes Red Green Blue</p>
+		    		<p>La quantité de chaque composantes détermine la couleure finale</p>
+		    		<br/>
+		    		<p>L'utilisateur entre une chaine hexadécimale correspondant à la couleur de son choix</p>
+		    		<p>Le programme doit lui retourner la valeur de Rouge/Vert/Bleu</p>
+		    		<p>Déterminez si la couleure est claire ou sombre</p>
+		    		<p>(si ValeurRouge*0.3+ValeurVerte*0.59+0.11*ValeurBleu>=128 => Couleur claire)</p>
+		    		<!--https://dyrk.org/2016/02/26/algo-detecter-si-une-couleur-est-sombre-ou-non/-->
+		    	</section>
+
+		    	
 		    	
 		        <!-- fin du cours -->
 
