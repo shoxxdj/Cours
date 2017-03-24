@@ -26,6 +26,9 @@ Sous objectifs :
 
 * Votre objectif prioritaire. 
 
+Piste de recherche : 
+	IPTables, Droits unix, chroot, container, reverse proxy .. 
+
 	
 Comme toujours, tout ce que vous développez doit etre sécurisé. 
 Ainsi vous pouvez attaquer vos concurents, sur le même principe que l'an dernier, chaque vulnérabilité trouvée vous rapporte des points :
