@@ -1,0 +1,13 @@
+_Man in the middle
+-- Configurez le réseau suivant : 
+--- 1 VM Serveur -> SRV
+--- 1 VM Victime -> VIC
+--- 1 VM Attaquant ( ou votre poste au choix ) -> ATT
+
+Les VM doivent commniquer comme suit : 
+	
+	SRV / VIC /ATT Sont dans le meme réseau
+	SRV propose un service WEB contenant une page d'authentification simple en HTML ( code ci dessous )
+	VIC se connecte au service WEB de SRV
+
+	ATT doit pouvoir intercepter ce message ! 
