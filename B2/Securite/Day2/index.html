@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Security</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Firewals & co </h1>
+					<h4>Un peu de sécurité</h4>
+				</section>
+
+				<section>
+					<h5>Un firewall à quoi ca sert ?</h5>
+					<img src="https://i.imgflip.com/zu248.jpg"/>
+				</section>
+
+				<section>
+					<p><i>Un pare-feu1 (de l'anglais firewall) est un logiciel et/ou un matériel permettant de faire respecter la politique de sécurité du réseau, celle-ci définissant quels sont les types de communications autorisés sur ce réseau informatique. Il mesure la prévention des applications et des paquets.</i></p>
+					<p class="fragment"><u>Wikipedia <3</u></p>
+				</section>
+
+				<section>
+					<p>Permet d'isoler un LAN ( réseau trusté ) d'un WAN ( le reste du monde ) </p>
+					<p>Permet de mettre en place des règles de filtrages en fonction de certains critères :</p>
+					<p>
+						<ul>
+							<li>Source</li>
+							<li>Destination</li>
+							<li>Port</li>
+							<li>Protocole</li>
+							<li>Date/Groupe d'utilisateur ... </li>
+						</ul>
+					</p>
+				</section>
+
+				<section>
+					<p>Un pare feu est souvent utilisé comme routeur</p>
+					<p>--> Création de DMZ</p>
+				</section>
+
+				<section>
+					<h2>DMZ</h2>
+					<img src="https://img.memesuper.com/c17c3b75ea0ac680c88c5421f214183d_-king-across-the-dmz-dmz-memes_625-530.jpeg">
+				</section>
+				<section>
+					<h2>DMZ</h2>
+					<p>Zone du réseau isolée du reste du LAN</p>
+					<p>Les serveurs accessibles depuis internet sont placés ici</p>
+				</section>
+
+				<section>
+					<h3>Types de firewalls</h3>
+				</section>
+				<section>
+					<h2>Stateless</h2>
+					<ul>
+						<li>Traite les paquets indépendaments</li>
+						<li>Exemple => ACL ( Access Control List )</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Statefull</h2>
+					<ul>
+						<li>Système "intelligent"</li>
+						<li>Sessions de connexion</li>
+						<li>Historique de connexion</li>
+					</ul>
+				</section>
+
+				<section>
+					<h3>Firewalls</h3>
+					<img src="https://upload.wikimedia.org/wikipedia/en/5/55/Fortinet_Logo.gif">
+					<img src="https://www.checkpoint.com/wp-content/uploads/opk_check-point_logo_horizontal.png">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Pfs-logo-vector.svg">
+				</section>
+
+				<section>
+					<img height="500px" width="50%" src="http://m.memegen.com/dkzuka.jpg">
+					<p>Firewall Applicatif</p>
+				</section>
+
+				<section>
+					<p>Equipement analysant le traffic web</p>
+					<p>Accepte ou bloque les requettes en fonction de règles</p>
+					<p>SQLi, XSS ... </p>
+				</section>
+
+				<section>
+					<img src="http://i1-news.softpedia-static.com/images/news2/Barracuda-Web-Application-Firewall-860-and-960-Launched-2.jpg">
+					<img src="http://www.computradetech.com.my/wp-content/uploads/2015/05/imperva-logo.jpg">
+					<img src="http://status.modsecurity.org/ModSecurityLogo.png">
+				</section>
+
+				<section>
+					<h1>Proxy / Reverse Proxy</h1>	
+					<img src="https://cdn.meme.am/instances/69391497.jpg">					
+				</section>
+
+				<section>
+					<h1>Proxy</h1>
+					<p>Permet de controler les accès à internet des utilisateurs</p>
+					<p>Filtrage par catégorie, par sites ...</p>
+				</section>
+
+				<section>
+					<h1>Reverse Proxy</h1>
+					<p>Permet l'accès à des ressources internes depuis internet</p>
+					<p>www.monurl.com => 10.33.1.1:8080</p>
+				</section>
+
+				<section>
+					<img src="https://www.varnish-software.com/wp-content/uploads/varnish_logo_blue_logo.png">
+					<img src="https://blog.netapsys.fr/wp-content/uploads/2016/08/Nginx-Logo.png">
+				</section>
+
+				<section>
+					<img src="img/network.png">
+				</section>
+
+				<section>
+					<p>TP : Installation / Configuration d'un PFSense</p>
+					<p>https://github.com/shoxxdj/Cours/blob/gh-pages/B2/Securite/Day2/tp.txt</p>
+				</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
