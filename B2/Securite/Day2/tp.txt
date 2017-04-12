@@ -46,7 +46,7 @@ Ne configurez pas de Vlan
 18) Démarez une machine Linux avec une interface réseau dans le LAN
 19) L'objectif est : 
 	en tappant une url custom ( entré dans votre fichier host )
-	vous devez accèder au serveur web situé derrière le firewall
+	vous devez accèder au serveur web (sur le linux ofc) situé derrière le firewall
 	pour cela, jouez avec les possiblités de PFSense. 
 	Mettez en place un reverse proxy ( parrait qu'un mec cool en a fait un ici : https://github.com/shoxxdj/reverseProxyJS ;) )
 	Vous pouvez aussi mettre en place un WAF ( regardez du coté de modsecurity )
