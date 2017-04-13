@@ -35,7 +35,7 @@ Ne configurez pas de Vlan
 14) Rendez vous sur l'ip du pfsense
 	logs par défaut : admin/pfsense
 15) vous pouvez modifier la conf, ou simplement passer ( pas la peine de la modifier pour l'instant )
-16) Ajoutez une règle pour bloquer l'accès a 163.172.35.21 pour tout les utilisateurs du LAN, cette règle doit logger les accès
+16) Ajoutez une règle pour bloquer(REJECT) l'accès a 163.172.35.21 pour tout les utilisateurs du LAN, cette règle doit logger les accès
 17) Vérifiez que la règle fonctionne
 
 -> Prenez un screenshot de votre règle ainsi que du log généré et envoyez le moi par mail
