@@ -1,0 +1,56 @@
+TP: PFSense
+Le but de ce TP est d'installer et de configurer un firewall pfsense
+Pour cela vous aurez besoin de 2 iso : PFSense et Windows7 
+Le windows 7 nous servira de client situé à l'interieur du LAN
+Certaines étapes peuvent etre faite en parallèle. 
+Plusieures VM sont demandés dans ce TP, vous pouvez en etteindre pour maximiser vos perfs.
+Le PFSense lui doit toujours etre allumé
+
+1) Téléchargez Windows 7 et PFSense
+2) Créez un reseau nat sans dhcp
+3) Installez le windows 7 avec les additions invités puis etteignez le
+4) Créez une VM avec 2 cartes réseau : 1 dans un réseau privé accessible uniquement par vos VM et 1 avec un accès au net
+   Linux -> autre kernel 2.6/3.X/4.X 
+5) Inserez l'iso de PFSense
+6) Choisissez boot multi user
+7) Changez le keymap
+8) Choisissez custom install
+9) Formatez le disk / partionnement par défaut / Utilisez le Kernel standard
+10)Rebootez la machine en ejectant le disque
+11) Selectionnez boot multi user
+
+Vous voici maintenant sur l'interface de gestion de PFSense
+Il faut à présent configurer le firewall
+
+Le WAN sera sur votre carte ayant accès a internet, l'ip de l'interface WAN peut etre prise en DHCP
+Le LAN sera sur votre réseau privé, activez le DHCP sur cette interface.
+Le PFSense pourra alors servir de routeur et distribuer des adresses IP
+
+Ne configurez pas de Vlan
+
+
+12) Démarez la windows 7 dans le réseau lan il devrais obtenir une ip du pfsense
+--- depuis le windows
+13) Ouvrez http://163.172.35.21/ dans un navigateur, une page d'acceuil NGINX devrait s'afficher
+14) Rendez vous sur l'ip du pfsense
+	logs par défaut : admin/pfsense
+15) vous pouvez modifier la conf, ou simplement passer ( pas la peine de la modifier pour l'instant )
+16) Ajoutez une règle pour bloquer(REJECT) l'accès a 163.172.35.21 pour tout les utilisateurs du LAN, cette règle doit logger les accès
+17) Vérifiez que la règle fonctionne
+
+-> Prenez un screenshot de votre règle ainsi que du log généré et envoyez le moi par mail
+
+//Partie LAB
+
+--Etteingez le Windows 7 
+18) Démarez une machine Linux avec une interface réseau dans le LAN
+19) L'objectif est : 
+	en tappant une url custom ( entré dans votre fichier host )
+	vous devez accèder au serveur web (sur le linux ofc) situé derrière le firewall
+	pour cela, jouez avec les possiblités de PFSense. 
+	Mettez en place un reverse proxy ( parrait qu'un mec cool en a fait un ici : https://github.com/shoxxdj/reverseProxyJS ;) )
+	Vous pouvez aussi mettre en place un WAF ( regardez du coté de modsecurity )
+	On peux aussi imaginer mettre en place une DMZ ... ;)
+
+	Pour ceux qui iront au bout de la partie LAB avec un truc bien cool j'offrirais des points bonus lors de l'éval finale. 
+	Pour le projet le plus cool je paye ma Magners ( ou jus de fruit pour les enfants )
