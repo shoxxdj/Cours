@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Requests / Beautiful Soup</h1>
+					<p><i>Web Requests made easy</i></p>
+				</section>
+				<section>
+					<h2>Web requests ?</h2>
+				</section>
+				<section>
+					<img src="img/webrequest.png"/>
+				</section>
+				<section>
+					<h2>Requests</h2>
+					<ul>
+						<li>Librairie Python</li>
+						<li>Simple d'utilisation</li>
+						<li>(très simple)</li>
+					</ul>
+				</section>
+				<section>
+						<code>
+							pip install requests
+						</code>
+				</section>
+				<section>
+					<h1>Effectuer une requette</h1>
+				</section>
+				<section>
+				    <pre><code data-trim data-noescape>
+				    	import requests
+r = requests.get('https://google.com')
+				    </code></pre>
+				</section>
+				<section>
+					<h2>Recuperer le résulat</h2>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+						>>> dir(r)
+['apparent_encoding', 'close', 'connection', 'content', 'cookies', 'elapsed', 'encoding', 'headers', 'history', 'is_permanent_redirect', 'is_redirect', 'iter_content', 'iter_lines', 'json', 'links', 'ok', 'raise_for_status', 'raw', 'reason', 'request', 'status_code', 'text', 'url']
+					</code></pre>
+				</section>
+				<section>
+					<code>http://docs.python-requests.org/en/master/</code>
+				</section>
+				<section>
+					<h1>Beautiful Soup</h1>
+					<i>HTML Parsing</i>
+				</section>
+				<section>
+					<code>pip install beautifulsoup4</code>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape>
+						import bs4 as BeautifulSoup
+soup = BeautifulSoup.BeautifulSoup(html,"html")
+madiv = soup.find('input',attrs={"class":"maclasse","id":"monId"})
+print madiv.get('name')
+print uneautrediv.text
+					</code></pre>
+				</section>
+				<section>
+					http://mathsolver.hackdumb.com/
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

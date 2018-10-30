@@ -1,0 +1,29 @@
+TP: Metasploit
+Le but de ce tp est de vous faire pratiquer l'utilisation de metasploit. 
+Pour cela vous aurez besoin de 2 VM étant sur le meme réseau. 
+La victime sera un windows XP sp3 ( sisi ca existe encore ) 
+Pour l'attaquant utilisez un ubuntu. 
+
+1) Installer Metasploit
+	Pour installer metasploit suivez rigoureusement ce guide : 
+		https://www.darkoperator.com/installing-metasploit-in-ubunt/
+	L'objectif est d'avoir un metasploit utilisable en utilisateur non root. 
+
+2) Installer le windows XP 
+	Un peu comme quand vous aviez 8 ans :)
+	Coupez le firewall pour le moment.
+
+3) Pendant que tout cela s'installe recherchez a quoi correspond la vulnérabilité ms08_067
+	-> Résumez ce qu'est cette vulnérabilité et comment elle est exploitée
+
+4) Une fois que tout est installé et connecté : 
+	a) démarez MSFCONSOLE
+	b) chargez l'exploit lié à cette vulnérabilité
+	c) remplissez les différentes options demandés
+	d) choisissez le payload : windows/meterpreter/reverse_tcp
+	e) exploitez la victime.
+
+5) Vous devez maintenant avoir un meterpreter.
+	a) faites un tour des différentes fonctionalités, prennez en 5 et expliquez les : 
+		la fonction machin, permet de faire ceci, ce qui peux servir a ... 
+

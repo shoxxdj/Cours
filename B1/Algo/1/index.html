@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title></title>
+
+		<meta name="description" content="Sécurité B1 - 1 - Introduction">
+		<meta name="author" content="Rémi Martin de abia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		    <div class="slides">
+		    	<!-- debut du cours -->
+		    		<section>
+		    			<h1>Algo / Maths / Programmation</h1>
+		    			<h4><i>Et peut etre d'autres trucs :)</i></h4>
+		    		</section>
+
+		    		<section>
+		    			<h1>A propos de ce cours</h1>
+		    			<ul>
+		    				<li>Je n'ai rien à vous apprendre</li>
+		    				<li>Du coup je ne vous apprendrais rien</li>
+		    				<li>Mais vous apprendrez des trucs quand meme</li>
+		    			</ul>
+		    		</section>
+
+		    		<section>
+		    			<h1>A propos de ce cours </h1>
+		    			<p>L'objectif est d'apprendre les bases de l'algorithmie et de la programmation</p>
+		    			<p>Ce cours ne fera pas de vous des as de la programmation</p>
+		    			<p>Mais vous saurez vous débrouiller</p>
+		    		</section>
+
+		    		<section>
+		    			<h1>Ready ?</h1>
+		    		</section>
+
+		    		<section>
+		    			<h1>Day 0</h1>
+		    			<h2>Basics</h2>
+		    		</section>
+		    		<section>
+		    			<h1>Système d'exploitation</h1>
+		    		</section>
+		    		<section>
+		    			<p>Roles :</p>
+		    			<ul>
+		    				<li>Gerer et alouer les ressources</li>
+		    				<li>Permettrela relatione ntre l'humain et la machine (utilisation de programmes)</li>
+
+		    			</ul>
+		    		</section>
+		    		<section>
+		    			<h1>Le Kernel</h1>
+		    		</section>
+		    		<section>
+		    			<p>Interface entre les composants hardware et logiciels</p>
+		    			<p>Propose des fonctions de programmation afin de faciliter les communications</p>
+		    		</section>
+
+		    		<section>
+		    			<h1>Les programmes</h1>
+		    		</section>
+		    		<section>
+		    			<p>Proposent des fonctionalitées nouvelles en se basant sur des fonctions offertes par le kernel</p>
+		    		</section>
+		    		<section>
+		    			<p>Cycle de vie d'un programme</p>
+		    			<p><b>Executable Compilés</b></p>
+		    			<ul>
+		    				<li>Code source</li>
+		    				<li>Code objet</li>
+		    				<li>Code executable</li>
+		    			</ul>
+		    			<p><b>Interprétés "Scripts"</b></p>
+		    			<ul>
+		    			<li>Passage dans une machine virtuelle (python/java) ou un interpreteur de commandes(sql) </li>
+		    			</ul>
+		    		</section>
+		    		<section>
+		    			<h1>Le processeur</h1>
+		    		</section>
+		    		<section>
+		    			<h3>Système d'instructions</h3>
+		    			<p>Ordre passé au processeur</p>
+		    			<p>Fais ci, Fais ca !</p>
+		    			<p>Les ordres osnt passés les uns après les autres</p>
+		    		</section>
+
+		    		<section>
+		    			<h1>Algorithmie</h1>
+		    		</section>
+		    		<section>
+		    			<h3>Matériel</h3>
+		    			<h1>Crayon+Papier</h1>
+		    		</section>
+		    		<section>
+						<p><u>Notion de base</u>:</p>
+						<p>L'algorithmie n'est pas un vrai langage</p>
+						<p>Cependnat c'est la base de tout</p>
+		    		</section>
+		    		<section>
+		    			<h1>Les variables</h1>
+		    		</section>
+		    		<section>
+		    			<p>Principe</p>
+		    			<p>Faire retenir des choses à l'ordinateur</p>
+		    		</section>
+		    		<section>
+		    			<h1>Types</h1>
+		    			<ul>
+		    				<li>Nombres entiers</li>
+		    				<li>Nombres réels</li>
+		    				<li>Caractères</li>
+		    				<li>Chaines de caractères</li>
+		    				<li>Booléen</li>
+		    			</ul>
+		    		</section>
+		    		<section>
+		    		<h1>Assigner une valeur à une variable</h1>
+		    		<h2>Nomdelavariable=valeur</h2>
+		    		</section>
+		    		<section>
+		    			<h1>Spécificités</h1>
+		    			<p>Un nom de variable ne contient pas de caractères spéciaux</p>
+		    			<p>Commence par une lettre</p>
+		    			<p>Possiblité d'utiliser _ à la place d'un espace</p>
+		    		</section>
+		    		<section>
+		    			<h1>Comparateurs</h1>
+		    		</section>
+		    		<section>
+		    			<h1>Faire comparer 2 valeurs</h1>
+		    			<h3><u><i>Ou deux variables</i></u></h3>
+		    			<h4>Une comparaison renvoie Vrai (1) ou Faux (0)</h4>
+		    		</section>
+		    		<section>
+		    			<h1>Liste des comparateurs</h1>
+		    			<p id="fragments">
+		    			<ul>
+		    				<li><</li>
+		    				<li>></li>
+		    				<li><=</li>
+		    				<li>>=</li>
+		    				<li>!=</li>
+		    				<li>==</li>
+		    			</ul>
+		    			</p>
+		    		</section>
+		    		<section>
+		    			<h1>Si ... Alors</h1>
+		    		</section>
+		    		<section>
+		    		<p>
+		    		<pre>
+Si (Condition)
+{
+	//On traite le cas si vrai
+}
+		    		</pre>
+		    		</p>
+		    		</section>
+		    		<section>
+		    			<p>Exo 01:</p>
+		    			<p>Lire un nombre, si ce nombre est négatif afficher sa valeur positive, si non afficher ce nombre</p>
+		    			<p>Pour lire un nombre vous pouvez utiliser la fonction LIRE()</p>
+					<p>TYPE nomvariable = FONCTION()
+		    		</section>
+		
+				<section>
+<pre>
+REEL nombre=LIRE()
+SI(nombre < 0){
+nombre=-nombre
+}
+AFFICHER(nombre)
+</pre>					
+				</section>
+				<section>
+					<h1>Si ... Alors ... Sinon</h1>	
+				</section>
+				<section>
+		    		<p>
+		    		<pre>
+Si (Condition)
+{
+	//On traite le cas si vrai
+}
+Sinon
+{
+	//On traite le cas si faux
+}
+		    		</pre>
+		    		</p>
+		    		</section>
+				<section>
+					<p>Exo 02:</p>
+					<p>Lire 2 nombres, afficher le plus grand</p>
+				</section>
+				<section>
+					<h1>Optimisation</h1>
+				</section>
+				<section>
+					<h3>Meme chose, mais en 5 instructions maximum</h3>	
+				</section>
+				<section>
+					<h1>Les boucles</h1>
+				</section>
+				<section>
+					<h1>Pourquoi répéter bêtement 100x la meme chose</h1>
+				</section>
+				<section>
+					<h3>Chaque boucle utilise un compteur</h3>
+					<h3>Ce compteur est en réalité une variable</h3>
+				</section>
+				<section>
+					<h2>Tant que</h2>
+					<p>Cette boucle s'execute tant que la condition n'est pas remplie</p>
+				</section>
+				<section>
+				<pre>
+ENTIER i = 0;
+TANT QUE(i<10){
+	Afficher(i);
+	i+=1;
+}
+
+				</pre>
+				</section>
+				<section>
+					<p>Exo 3:</p>
+					<p>lire un nombre</p>
+					<p>Additionner tout les nombres de 0 à ce nombre</p>
+					<p>Ex : nombre choisit = 5</p>
+					<p>resultat = 0+1+2+3+4+5</p>
+				</section>
+				<section>
+					<pre>
+Entier Total=0;
+Entier Compteur = Lire();
+Entier Valeur;
+Tant que (Compteur>=0)
+{
+	Total=Total+Compteur
+	Compteur-=1
+}
+Afficher(Total);
+
+					</pre>
+				</section>
+				<section>
+					<p>Exo 4:</p>
+					<p>Tables de multiplication</p>
+					<p>Ecrire un algo permettant d'afficher les tables de multiplication (de 0 à 10)</p>
+				</section>
+				<section>
+					<p>Exo 4:</p>
+					<p>Tables de multiplication</p>
+					<p>Ecrire un algo permettant d'afficher les tables de multiplication (de 0 à 10)</p>
+					<p><i><u>Hint</u></i>: Pensez au boucles dans les boucles</p>
+				</section>
+
+				<section>
+					<pre>
+ENTIER a=0;
+ENTIER b=0;
+Tant que(a<=10){
+	Tant que(b<=10){
+		Valeur = a*b;
+		Afficher(a+"+"+b+"="+Valeur);
+		b++;
+	}
+	b=0;
+	a++;
+}						
+					</pre>
+				</section>
+				<section>
+					<p>Exo 5</p>
+					<p>Nombres pairs</p>
+					<p>Affichez tout les nombres pairs de 0 à 100</p>
+				</section>
+				<section>
+					<pre>
+ENTIER Valeur = -2;
+Tant que(Valeur<100){
+	Valeur=Valeur+2;
+	Afficher(Valeur);
+}
+					</pre>
+				</section>
+				<section>
+					<h1>Le modulo</h1>
+				</section>
+				<section>
+					<h1>Le modulo</h1>
+					<p>"Division reste" -> division Euclidienne</p>
+					<p>Le résultat de la fonction modulo correspond au reste de la division euclidienne</p>
+				</section>
+				<section>
+					<p>Exemple :</p>
+					<p>Modulo(5,2)</p>
+					<p>5/2 =2+1</p>
+					<p>Modulo(5,2)=1</p>
+					<p>Modulo(6,3)=0</p>
+				</section>
+				<section>
+					<p>Exo 6</p>
+					<p>Afficher les nombres pairs situés entre 2 nombres choisits par l'utilisateur</p>
+				</section>
+				<section>
+					<pre>
+ENTIER Binf=Lire();
+ENTIER Bsup=Lire();
+
+Si(Binf>Bsup){
+	ENTIER tmp=Bsup;
+	Binf=Bsup;
+	Bsup=tmp;
+}
+
+Si(Mod(Binf,2)==1){
+	Binf+=1;
+}
+Tant que(Binf<=Bsup){
+	Afficher(Binf):
+	Binf+=2;
+}
+					</pre>
+				</section>
+
+		        <!-- fin du cours -->
+
+		    </div>
+		</div>
+
+
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

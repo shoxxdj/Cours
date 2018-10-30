@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Courses / Ressources</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <style type="text/css">
+    	#mainTitle{
+    		text-align: center;
+    	}
+    	
+    </style>
+</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 id="mainTitle">Cours de sécurité</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="list-group" id="menu">
+					  <a href="../../../cours" class="list-group-item">Cours</a>
+					  <a href="../../" class="list-group-item active">TP</a>
+					  <a href="../../../fil-rouge" class="list-group-item">Fil Rouge</a>
+					  <a href="../../../tools" class="list-group-item">Outils</a>
+					  <a href="../../../contact" class="list-group-item">Contact</a>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="panel panel-default">
+					  <div class="panel-heading">TP Crypto</div>
+					  <div class="panel-body">
+					  	<p>Dans ce TP vous allez manipuler différents outils de cryptographie</p>
+					  	<ul>
+					  		<li>
+					  			Chiffrement Symétrique
+					  			<ul>
+					  				<li>
+					  					A l'aide de gpg chiffrez un fichier
+					  				</li>
+					  				<li>Transmettez la clef à votre voisin ainsi que le fichier</li>
+					  				<li>Déchiffrez le fichier de votre voisin et vérifiez grace à un hash que tout à fonctionné</li>
+					  			</ul>
+					  		</li>
+					  		<li>
+					  			Chiffrement Asymétrique
+					  			<ul>
+					  				<li>Installez le binaire OpenSSL</li>
+					  				<li>A l'aide de OpenSSL :<!-- A l'aide de openssl
+https://www.howtoforge.com/tutorial/linux-commandline-encryption-tools/--></li>
+					  				<ul>
+					  					<li>Générez une paire de clef</li>
+					  					<li>Récupérez la clef de votre voisin</li>
+					  					<li>Chiffrez un message avec sa clef</li>
+					  					<li>Déchiffrez le message que vous transmet votre voisin</li>
+					  					<li>Vérifiez grâce à un hash que tout à fonctionné</li>
+					  				</ul>
+					  			</ul>
+					  		</li>
+					  		<li>
+					  			<ul>
+					  				<li>Sur votre Serveur SSH, mettez en place l'authentification par clef :</li>
+					  				Ressources :<a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2">1</a> <a href="https://www.digitalocean.com/community/tutorials/how-to-use-ssh-keys-with-putty-on-digitalocean-droplets-windows-users">2</a>
+					  			</ul>
+					  		</li>
+					  	</ul>
+					  </div>	
+					</div>				
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

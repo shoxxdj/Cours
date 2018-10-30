@@ -1,0 +1,5 @@
+1) Créez un repositorry appelé : username.github.io (ou username correspond a votre pseudo sur github ) 
+2) Récupérez le code de ce repository comme lors du premier TP
+3) Créez un fichier "index.html", remplissez le comme vous le souhaitez
+4) Commitez et pushez votre code
+5) Rendez vous sur http://username.github.io, votre message devrais s'afficher :) 

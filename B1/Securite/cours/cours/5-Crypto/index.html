@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sécurité B1 - 5.1 Crypto</title>
+
+		<meta name="description" content="Sécurité B1 - 1 - Introduction">
+		<meta name="author" content="Rémi Martin de abia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		    <div class="slides">
+		        <!-- Cours -->
+		        <section>
+			        <h1>Crypto</h1>
+			        <hr/>
+			        <h2>Rémi Martin de abia</h2>
+		        </section>
+
+		        <section>
+		        	<h2>Programme du jour </h2>
+		        	<img src="images/reverse1.jpg"/>
+		        </section>
+
+		        <section>
+		        	<h2>Cryptographie</h2>
+		        	<h3>Vocabulaire</h3>
+		        </section>
+
+		        <section>
+		        	<h3>Bob parle à Alice</h3>
+		        	<img src="images/crypto.jpeg"/>
+		        </section>
+
+		        <section>
+		        	<h2>Pour s'assurer un minimum de <i>confidentalité</i> Bob CHIFFRE les messages qu'il envoit à Alice</h2>
+		        </section>
+
+		        <section>
+		        	<h3>Bob <h1>CHIFFRE</h1> son message pour Alice</h3>
+		        	<h3>Alice <h1>DECHIFFRE</h1> le message de Bob</h3>
+		        </section>
+
+		        <section>
+		        	<h3>Pour chiffrer un message Bob utilise une clef</h3>
+		        	<h4>Texte chiffré = FonctionChiffrement(Texte en clair, Clef)</h4>
+		        </section>
+
+		        <section>
+		        	<h3>Immaginons un attaquant "eve" qui intercepte la conversation</h3>
+		        	<h3>Eve va alors <h1>Decrypter</h1> le message, pour trouver la clef, puis <h1>Dechiffre</h1> le message à l'aide de la clef</h3>
+		        </section>
+
+		        <section>
+		        	<h2>Comme vous l'aurez compris, CRYPTER n'existe pas :) </h2>
+
+		        	<h5> < /vocabulaire> </h5>
+		        </section>
+
+		        <section>
+		        	<h1>Chiffrement symétrique</h1>
+		        </section>
+
+		        <section>
+		        	<h2>1 clef partagée</h2>
+		        	Exemple: Vigenere
+		        </section>
+
+		        <section>
+		        	<h2>Avantages</h2>
+		        	<ul>
+		        		<li>Rapide et simple à mettre en place </li>
+		        	</ul>
+		        	<h2>Inconveniants</h2>
+		        	<ul>
+		        		<li>Une seule clef à trouver pour l'attaquant</li>
+		        	</ul>
+		        </section>
+
+		        <section>
+		        	<h1>Chiffrement Asymétrique</h1>
+		        </section>
+
+		        <section>
+		        	<h2>Bob et Alice ont chacun 2 clef</h2>
+		        	<h2>Une publique et une privée</h2>
+		        </section>
+
+		        <section>
+		        	<h2>Clef Publique</h2>
+		        	<h3>Sert à chiffrer</h3>
+		        </section>
+
+		        <section>
+		        	<h2>Clef Privée</h2>
+		        	<h3>Sert à déchiffrer</h3>
+		        </section>
+
+		        <section>
+		        	<p>Bob :</p> FonctionChiffrement('texte clair',ClefPubliqueAlice)
+		        	<p>Alice :</p> FonctionDechiffrement(texteChiffredeBob,ClefPriveAlice)
+		        </section>
+
+		        <section>
+		        	<img src="images/pp.png"/>
+		        </section>
+
+		        <section>
+		        	<p>En pratique on peux utiliser les 2 clefs pour les 2 actions. Mais c'est mal, du coup on le fait pas :)</p>
+		        </section>
+
+		        <section>
+		        	<h1>Utilités :</h1>
+		        	<p>Chiffrement de mails : PGP</p>
+		        	<p>Connections SSH</p>
+		        </section>
+
+		        <section>
+		        	<h1>Hash</h1>
+		        	<h2>Fonction de controle d'intégritée</h2>
+		        </section>
+
+		        <section>
+		        	<h3>One Way Hash</h3>
+		        	<p>Fonction mathématique qui calcule l'empreinte d'une donnée</p>
+		        	<p>Ex: md5('lala')==549e80f319af070f8ea8d0f149a149c2</p>
+		        </section>
+
+		        <section>
+		        	<h3>Utilitée</h3>
+		        	<ul>
+		        	<li>Stocker des mots de passes</li>
+		        	<li>Verifier l'intégritée</li>
+		        	</ul>
+		        </section>
+		        
+		        <section>
+		        	<h1>Questions ?</h1>
+		        </section>
+
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

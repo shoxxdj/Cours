@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Security Courses / Ressources</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../css/bootstrap.min.css">
+    <style type="text/css">
+    	#mainTitle{
+    		text-align: center;
+    	}
+    	
+    </style>
+</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1 id="mainTitle">Cours de sécurité</h1>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="list-group" id="menu">
+					  <a href="../../../cours" class="list-group-item">Cours</a>
+					  <a href="../../" class="list-group-item active">TP</a>
+					  <a href="../../../fil-rouge" class="list-group-item">Fil Rouge</a>
+					  <a href="../../../tools" class="list-group-item">Outils</a>
+					  <a href="../../../contact" class="list-group-item">Contact</a>
+					</div>
+				</div>
+				<div class="col-md-9">
+					<div class="panel panel-default">
+					  <div class="panel-heading">Fil Rouge</div>
+					  <div class="panel-body">
+					  	<p>Le but de ce TP est de vous faire pratiquer le scanning. Le TP n'est pas très long, mais prennez bien le temps de comprendre ce que vous faites.</p>
+
+
+
+					  	<ul>
+					  		<li>Téléchargez et mettez en place la machine virtuelle <a href="https://www.vulnhub.com/entry/metasploitable-2,29/">Metasploitable</a></li>
+					  		<li>Vérifiez que la machine est démarée et accessible dans votre réseau interne</li>
+					  		<li>
+					  			A l'aide de nmap
+					  			<ul>
+					  				<li>Trouvez les ports ouverts sur la machine</li>
+					  				<li>Trouvez l'OS et la version de l'os installé sur la machine</li>
+					  				<li></li>
+					  			</ul>
+					  		</li>
+					  		<li>
+					  			Installez Nessus ( Privilégiez la version Linux ) 
+					  			<ul>
+					  				<li>Rendez vous sur le site de la boite propriétaire de Nessus</li>
+					  				<li>Téléchargez la version Home (n'hesitez pas à utiliser des mails anonymes)</li>
+					  				<li>A vous de trouver comment installer nessus :) <a href="http://google.com">Lien Magique</a></li>
+					  			</ul>
+					  		</li>
+					  		<li>
+					  			Utilisez Nessus
+					  			<ul>
+					  				<li>Scannez la machine Metasploitable</li>
+					  				<li>Que ce passe t il pendant le scan ?</li>
+					  				<li>Quels sont les résultats ?</li>
+					  				<li>Pour chaque résultat Critique, High, et Medium : Qualifiez le résultat, tentez de le vérifier ( si il s'agit d'un problème de version essayez de retrouver cette version, vous pouvez acceder à la machine)</li>
+					  				<li>Pour les résultats contenant des CVE retrouvez la CVE concerné. Expliquez ce qu'est une CVE et son utilitée</li>
+					  			</ul>
+					  		</li>
+					  		<li>Il existe d'autres scanners que Nessus, trouvez en un, téléchargez le et utilisez le sur la machine. Comparez les résultats. Pourquoi les résultats sont ils différents ?</li>
+					  	</ul>
+
+					  	
+					  </div>	
+					</div>				
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

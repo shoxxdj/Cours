@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h1>Tableaux</h1>
+				</section>
+				<section>
+					<p>Les tableaux n'existent pas, on parle de List</p>
+					<i>et en vrai c'est la meme chose :) </i>
+				</section>
+				<section>
+					<pre>
+maListe = []
+maListe.append(1)
+maListe.append("Text")
+print MaList #	[1, 'Text']
+print MaList[0] #1					
+					</pre>
+				</section>
+				<section>
+					<pre>
+maListe=[1,2,3,4,5]
+print maListe[0]
+					</pre>
+				</section>
+				<section>
+					<h1>Dictionnaires</h1>
+				</section>
+				<section>
+					<p>Des tableaux clef valeurs <i>(en gros)</i></p>
+				
+					<pre>
+monDict = {}
+monDict["nom"]="Michel"
+monDict["age"]=12
+Dict2 = {"cle":"valeur","yooooo":1}
+					</pre>
+				</section>
+				<section>
+					<h1>Fonctions / Classes & Objets</h1>
+				</section>
+				<section>
+					<p>Python est un langage objet</p>
+					<p>Et comme toujours en python tout est simple</p>
+				</section>
+				<section>
+					<h3>Fonctions</h3>
+					<code>
+						<pre>
+def nomdefonction(arg1,arg2):
+	doStuff...
+	return value
+						</pre>
+					</code>
+				</section>
+				<section>
+					<h3>Classes</h3>
+					<code>
+						<pre>
+class MaClass:
+	def __init__(self,val1,val2):
+		self.nom = val1
+		self.prenom = val2
+						</pre>
+					</code>
+				</section>
+				<section>
+					<h3>Classes</h3>
+					<code>
+						<pre>
+class MaClass:
+	def doStuff(self):
+		print "I do Stuff"
+
+	def __init__(self,val1,val2):
+		self.nom = val1
+		self.prenom = val2
+
+User = MaClass('michel','michel')
+User.doStuff() #I do Stuff
+print User.nom # michel
+print User.prenom # michel
+User.nom = "Toto"
+print User.nom # Toto
+						</pre>
+					</code>
+				</section>
+				<section>
+					<h1>Heritage</h1>
+				</section>
+				<section>
+					<h3>Heriatge</h3>
+					<code>
+						<pre>
+class Human:
+	def doStuff(self):
+		print "I do Stuff"
+
+	def __init__(self,prenom,nom):
+		self.nom = nom
+		self.prenom = prenom
+
+class Warrior(Human):
+	def kamehameha(self):
+		print "I can shot you over %s"%(self.force)
+
+	def __init__(self,prenom,nom,force):
+		Human.__init__(self,prenom,nom) #Rappel du constructeur
+		self.force = force
+
+
+michelsan = Human("michel","san")
+michelsan.doStuff()
+
+songo = Warrior("son","goku",9000)
+songo.kamehameha()
+						</pre>
+					</code>
+				</section>
+				<section>
+					<h1>Librairies</h1>
+				</section>
+				<section>
+					<p>permet de découper le code</p>
+					<p>Fichiers contenant des fonctions / classes</p>
+					<p>Petit truc : n'apellez jamais votre programme du nom d'une librairie que vous importez</p>
+				</section>
+				<section>
+					<p>Ex:</p>
+					<p>Dans mon fichier fonctions.py je place les fonctions </p>
+					<p>Dans mon fichier main.py je fais : import fonctions</p>
+					<p>Je peux maintenant appeller fonctions.mafonction()</p>
+					<p>(Demo)</p>
+				</section>
+				<section>
+					https://py.checkio.org/
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

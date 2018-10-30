@@ -1,0 +1,36 @@
+TP GIT 3
+Les branches 
+
+git permet de mettre en place des branches.
+Immaginons : 
+	Vous développez une application qui est fonctionelle
+	Vous décidez d'ajouter une feature à cette application sauf que vous ne voulez pas tout casser
+
+Pour éviter cela vous allez créer des branches.
+Créez un répository, ne reprenez pas celui de la veille, cela vous permettera de faire le point avec le TP de la veille
+Poussez y un fichier Readme.md ainsi qu'un autre fichié appelé "Projet.txt"
+Le fichier Readme contient générallement la description du projet.
+Dans le fichier Projet.txt inscrivez ceci : "je suis dans la branche MASTER"
+
+Une fois ceci fait, il est temps de créer une nouvelle branche
+Pour cela lancez la commande : git checkout -b <NOMDELABRANCHE>
+Modifiez le fichier Projet.txt et remplacez le texte par celui ci : "je suis dans la branche <NOMDELABRANCHE>"
+Poussez votre code sur le serveur. 
+Attention aux erreurs renvoyés par GIT, lisez les biens elle vous expliquerons quoi faire.
+
+Rendez vous sur la page github de votre repository
+Vous devriez avoir 2 branches, vous pouvez comparer les modifications avec le bouton "Compare & pull request"
+
+Vous allez ensuite créer un pull request.
+Un pull request consiste à proposer l'incorporation d'une branche dans une autre ( la plupart du temps, la branche master)
+
+Ecrivez un message justifiant votre demande de pull request
+Puis cliquez sur "Create Pull Request"
+Vous arrivez maintenant sur une interface ou la personne qui demande à faire un pull request et celle qui est prorpiétaire du repository peuvent discuter du code.
+Cliquez sur "Merge pull request"
+Confirmez ce merge
+Vous pouvez maintenat cliquer sur Delette Branch pour supprimer la branche que vous veniez de créer
+Vous pouvez constater sur votre repository que le fichier de la branche que vous aviez crée à été fusionné avec celui de la branche origin.
+
+Merge -> Fusion de 2 Branches
+Pull Request -> Demande de fusion de 2 Branches

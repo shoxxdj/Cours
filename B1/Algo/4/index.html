@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title></title>
+
+		<meta name="description" content="Sécurité B1 - 1 - Introduction">
+		<meta name="author" content="Rémi Martin de abia">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+		    <div class="slides">
+		    	<!-- debut du cours -->
+		    	<section>
+		    		<h1>Day X</h1>
+		    	</section>
+
+
+		    	<section>
+		    		<h1>Les boucles</h1>
+		    		<img src="images/boucle.jpg">
+		    	</section>
+		    	<section>
+		    		<h2>Tant Que</h2>
+		    		<p>L'action s'effectue tant que la condition est respectée</p>
+		    		<p>L'action ne s'effectue pas forcement</p>
+		    	</section>
+		    	<section>
+		    		<h2>Faire Tant Que</h2>
+		    		<p>L'action s'effectue au moins une fois</p>
+		    		<p>La condition est vérifiée à la fin du premier tour de boucle</p>
+		    	</section>
+		    	<section>
+		    		<pre>
+Entier i=0
+Faire{
+	i+=1
+} TantQue(i<10)
+		    		</pre>
+		    	</section>
+		    	<section>
+		    		<h2>Pour</h2>
+		    		<p>L'action s'effectue un nombre déterminée de fois</p>
+		    	</section>
+		    	<section>
+		    		<pre>
+Pour(i;i<10;i++){
+	Afficher(i)
+}
+		    		</pre>
+		    		<pre>
+Pour(ENIER a=20;a<10;a--){
+	Afficher(a)
+}
+		    		</pre>
+		    	</section>
+		    	<section>
+		    		<h2>Les Tableaux</h2>
+		    		<img src="images/luke.jpg"/>
+		    	</section>
+		    	<section>
+		    		<h4>2 dimensions</h4>
+		    		<h1>Lignes / Colones</h1>
+		    	</section>
+		    	<section>
+		    		<h2>== aux tableaux a plusieures dimensions</h2>
+		    		<h2>Il faut cependant préciser le nombres de lignes</h2>
+		    	</section>
+		    	<section>
+		    		<img src="images/multiarray.jpg"/>
+		    	</section>
+		    	<section>
+		    		<pre>
+Char MonTableau[3][3]=[['a','b','c'],['d','e','f'],['g','h','i']]
+Afficher(MonTableau[0][0]) #Affiche 'a'
+Afficher(MonTableau[2][1]) #Affiche 'h'
+MonTableau[1][2]='z'
+		    		</pre>
+		    	</section>
+				<section>
+		    		<p>Exo ?</p>
+		    		<p>Créez un tableau de dimensions (8,15).</p>
+		    		<p>Remplissez le d'entiers aléatoires</p>
+		    		<p>Trouvez la valeur la plus grande dans le tableau</p>
+		    	</section>
+		    	<section>
+		    		<p>Exo ?+1</p>
+		    		<p>Créer un tableau de 9 lignes / colones</p>
+		    		<p>Pour chaque case l'utilisateur entre un nombre</p>
+		    		<p>Une fois l'initialisation terminée, pour chaque ligne l'utilisateur peux:</p>
+		    		<ul>
+		    			<li>Additionner tout le contenu de la ligne et avoir le résulat</li>
+		    			<li>Multiplier tout le contenu de la ligne et avoir le résultat</li>
+		    			<li>Ne rien faire et passer à la ligne suivante</li>
+		    		</ul>
+		    		<i>Pensez aux fonctions :)</i>
+		    	</section>
+		    	<section>
+		    		<h1>Algo for Security !</h1>
+		    	</section>
+		    	<section>
+		    		<h1>La Table ASCII</h1>
+		    	</section>
+		    	<section>
+		    		<p>Votre ordinateur ne connait pas les caractères alphabetiques</p>
+		    		<p>Par contre il connait les nombres</p>
+		    		<p>La table ascii permet d'assigner une valeur à un caractère</p>
+		    		<p>Il existe des fonctions pour obtenir la position d'un caractère dans la table ascii</p>
+		    		<p>Sur linux -> man ascii</p>
+		    	</section>
+		    	<section>
+		    		<h3>Mise en pratique des concepts d'algos dans un un contexte</h3>
+		    	</section>
+		    	<section>
+		    		<p>Par groupe de 3/4</p>
+		    		<p>Faites des recherches sur les algorithmes proposés</p>
+		    		<p>Pour chacun d'entre eux :</p>
+		    		<ul>
+		    			<li>Comprennez son fonctionnement</li>
+		    			<li>Ecrivez le</li>
+		    		</ul>
+		    	</section>
+		    	<section>
+		    		<p>Chiffre de cesar</p>
+		    	</section>
+		    	<section>
+		    		<p>Chiffre de vigenere</p>
+		    	</section>
+		    	<section>
+		    		<p>Cassage des précédents algorithmes</p>
+		    		<p>Trouver une méthode permettant de retrouver la clef de chiffrement</p>
+		    		<p>Mettre l'algo en place</p>
+		    	</section>
+		    	<section>
+		    		<p>Algo for videoGames</p>
+		    	</section>
+		    	<section>
+		    	<h3>Par groupe de 3/4</h3>
+		    	<ul>
+		    		<li>Bataille navale</li>
+		    		<li>Labirynthe</li>
+		    		<li>Pacman</li>
+		    		<li>Snake</li>
+		    	</ul>
+		    	<p>Bonus : Soutenance par groupe / explication des algos </p>
+		    	</section>
+
+
+		        <!-- fin du cours -->
+		    </div>
+		</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
+

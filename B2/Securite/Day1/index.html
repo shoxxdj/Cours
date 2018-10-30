@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Network Attacks</h1>
+				</section>
+
+				<section>
+					<li>Profiter des faiblesses des protocoles réseau</li>
+					<li>DOS</li>
+					<li>Tromperie d'utilisateur</li>
+				</section>
+
+				<section>
+					<h1>Etape 1</h1>
+					<h2>Intrusion sur le réseau</h2>
+				</section>
+
+				<section>
+					<h3>Intrusion Physique !</h3>
+					<img src="http://ttag.zippykidcdn.com/wp-content/uploads/2011/10/wires_A_Server_Room_Nightmare.jpg">
+				</section>
+
+				<section>
+					<h1>Wifi</h1>
+					<img src="https://cdn.meme.am/instances/500x/65144396/hacker-we-secured-the-corporate-network-dont-worry-pub-wifi-is-wide-open.jpg">
+				</section>
+
+				<section>
+					<h1>Wifi <strike>Security</strike></h1>
+				</section>
+
+				<section>
+					<h1>1997: Wep</h1>
+					<h2>Aka: Autant ne pas mettre de mot de passe</h2>
+				</section>
+
+				<section>
+					<h1>Wep</h1>
+					<ul>
+						<li class="fragment">Caractères Hexa</li>
+						<li class="fragment">Utilise un algorithme RC4</li>
+						<li class="fragment">-> RC4 => Ne pas utiliser 2x la meme clef sinon on peux la retrouver</li>
+						<li class="fragment">Utilise donc un IV pour palier ce soucis </li>
+						<li class="fragment">L'IV est codé sur 24bits ... </li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Attaque WEP</h1>
+					<ul>
+						<li class="fragment">On va écouter (sniffer) le réseau</li>
+						<li class="fragment">On va injecter des requettes ARP pour générer du traffic</li>
+						<li class="fragment">Le but est d'obtenir 2x le meme IV (16 777 216 paquets)</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="http://shoxx-website.com/wp-content/uploads/2013/10/Wifi6.png">
+				</section>
+
+				<section>
+					<h1>2000: WPA</h1>
+					<h2>Parlons enfin sécurité !</h2>
+				</section>
+
+				<section>
+					<h1>WPA/WPA2 ?</h1>
+					<h3 class="fragment">WPA a été créé en urgence en attendant WPA2</h3>
+					<h3 class="fragment">Le mécanisme est identique, les algos de sécurité sont meilleurs sur WPA2</h3>
+				</section>
+
+				<section>
+					<h1>WPA</h1>
+					<ul>
+						<li class="fragment">4 paquets "EAPOL" ou 4way Handshake</li>
+						<li class="fragment" >1) Le client demande a l'ap a s'authentifier</li>
+						<li class="fragment" >2) L'ap Envoie un challenge au client</li>
+						<li class="fragment" >3) Le client chiffre le challenge avec la clef et envoie un challenge a l'AP</li>
+						<li class="fragment" >4) L'ap autorise la connexion, chiffre le challenge du client et lui envoie pour vérification</li>
+						<li class="fragment" >On peux aller sur facebook \o/ </li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Attaque WPA</h1>
+					<ul>
+						<li class="fragment" >Le challenge est envoyé en clair</li>
+						<li class="fragment" >La réponse est chiffrée avec la clef</li>
+						<li class="fragment" >Pour obtenir ces infos on va envoyer des paquets DEAUTH a l'ap et au client</li>
+						<li class="fragment" >On a donc une équation avec 1 inconnue</li>
+						<img class="fragment"  src="http://www.thecyberindia.com/wp-content/uploads/2017/01/dictionaryattack.jpg">
+					</ul>
+				</section>
+
+				<section>
+					<h1>WPA2 entreprise</h1>
+					<ul>
+						<li>Couple Login / Mot de passe</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>WPS</h1>
+					<ul>
+						<li>8 nombres</li>
+						<li>1 073 741 824 possibilités</li>
+						<img src="http://www.quickmeme.com/img/56/56234bbe107f5452530f1a224ecdcb028b07d04beaf70f1bfb378cd72052aceb.jpg">
+					</ul>
+				</section>
+
+				<section>
+					<h1>Rogue AP</h1>
+					<h2>Let's create a Fake AP!</h2>
+				</section>
+
+				<section>
+					<h2>Etape 2</h2>
+					<h3>Reconnaitre le réseau</h3>
+				</section>
+
+				<section>
+					<h4>nmap, nessus ... </h4>
+					<h4>Trouver des services vulnérables</h4>
+				</section>
+
+				<section>
+					<img src="http://www2.mes-coloriages-preferes.biz/colorino/Images/Large/Personnages-celebres-Troll-face-Okay-meme-face-139940.png">
+				</section>
+
+				<section>
+					<h1>Attaque des protocoles !</h1>
+				</section>
+
+				<section>
+					<h1>Man in the middle</h1>
+					<p>Rediriger le traffic vers sois</p>
+					<p>Afin de l'analyser / le modifier</p>
+				</section>
+
+				<section>
+					<h1>Man in the middle</h1>
+					<p>Courrament utilisé</p>
+					<img src="http://www.symeos.com/wp-content/uploads/2017/02/maninthemiddle.jpg">
+				</section>
+
+				<section>
+					<h1>Exemple</h1>
+					<p>ARP Poisonning</p>
+				</section>
+
+				<section>
+					<h1>Protocole ARP</h1>
+					<ul>
+						<li>Dans un réseau local on communique en adresse MAC</li>
+						<li>Sauf qu'on ne connais que les adresses IP</li>
+						<li>Le protocole ARP se charge de faire la relation IP<>MAC </li>
+						<li>Ces informations sont stockés dans la table ARP</li>
+					</ul>
+				</section>
+
+				<section>
+					<h1>Peut on attaquer ce protocole ?</h1>
+					<img class="fragment" src="https://img.memesuper.com/759729d47f2372444b2a7ee0e7a535b7_champ-minstrel-burglar-yes-we-can-meme_306-327.jpeg">
+				</section>
+
+				<section><h1>( Ca se passe dans votre TP :p )</h1><p>https://github.com/shoxxdj/Cours/blob/gh-pages/B2/Securite/Day1/tp.txt</p></section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

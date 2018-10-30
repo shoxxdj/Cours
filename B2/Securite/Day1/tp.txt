@@ -1,0 +1,41 @@
+_Man in the middle
+-- Configurez le réseau suivant : 
+--- 1 VM Victime -> VIC
+--- 1 VM Attaquant ( ou votre poste au choix ) -> ATT
+
+Les VM doivent commniquer comme suit: 
+	
+	VIC /ATT Sont dans le meme réseau
+	VIC doit pouvoir se connecterà internet facilement (utililiser un navigateur, moi aussi je sais faire des curls.
+
+	le but de ce TP est de pratiquer l'ARP poisonning 
+
+	1) Qu'est ce qu'un man in the middle? 
+	2) Qu'est ce que la table ARP ? 
+
+
+_Attaque 
+	
+	Téléchargez Ettercap sur la machine de l'attaquant (prennez la version avec GUI)
+	Téléchargez Wireshark et lancez le en écoute sur l'interface de votre lab
+
+	Cliquez sur Sniff > Unified
+	Choisissez la carte réseau appropriée 
+	Scannez les hotes > Host > Scan host 
+	Selectionnez votre cible > L'host cible dans Target 1 > La passerelle dans Target 2 
+
+	Lancez l'attaque ! 
+	Mitm > ARP poisonning > Sniff remote connections > Valider
+
+	3) D'après vos recherches sur l'ARP poisonning que se passe-t-il ? 
+
+	Depuis le poste de victime, connectez vous sur un site en HTTP ( http://hackdumb.com par exemple )
+	Observez le résultat dans Ettercap, si tout se passe bien, vous devriez voir votre mot de passe apparaitre. 
+
+	( Pensez à le changer ;) ) 
+
+	Ouvrez Wireshark, ajoutez un filtre sur l'ip de votre victime, et repérez les connections. => Screenshot 01
+
+
+
+	Reproduisez l'opération avec un windows en attaquant et le logiciel Cain & Abel ( et google ;) )
